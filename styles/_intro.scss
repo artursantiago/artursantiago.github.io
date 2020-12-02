@@ -37,6 +37,7 @@ ul {
     background: $gradient;
     color: transparent;
     background-clip: text;
+    -webkit-background-clip: text;
     display: inline-block;
   }
 
