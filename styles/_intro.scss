@@ -24,6 +24,13 @@ ul {
   @include flex(space-around, center, row)
 }
 
+.active {
+  background: $gray-text;
+  color: white;
+  padding: 0.6em 3rem;
+  border-radius: 2rem;
+}
+
 .intro {
   min-height: 90vh;
   width: 90%;
@@ -32,7 +39,7 @@ ul {
   flex-wrap: wrap;
 
   h2 {
-    font-size: 8rem;
+    font-size: 7rem;
     padding-top: 2rem;
     background: $gradient;
     color: transparent;
@@ -42,13 +49,20 @@ ul {
   }
 
   h3 {
-    font-size: 6rem;
-    padding: 2rem 0rem;
+    font-size: 5rem;
+    padding: 2rem 0rem 1rem;
   }
 
   p {
     padding-top: 2rem;
     color: $gray-text;
+  }
+}
+
+.intro-images {
+  @include flex(center, center, row);
+  svg {
+    width: 80%;
   }
 }
 
@@ -68,19 +82,12 @@ ul {
   }
 }
 
-.active {
-  background: $gray-text;
-  color: white;
-  padding: 1em 3rem;
-  border-radius: 2rem;
-}
-
 .intro-text, .intro-images {
   flex: 1 1 40rem;
 }
 
 #clock {
-  animation: clock 4s infinite linear;
+  animation: clock 2s infinite linear;
   transform-box: fill-box;
   transform-origin: 50% 90%;
 }
