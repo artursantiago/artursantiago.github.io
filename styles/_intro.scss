@@ -1,0 +1,135 @@
+.main-head {
+  width: 95%;
+  margin: 0 0 0 auto;
+}
+
+nav {
+  @include flex(space-between, center, row);
+  flex-wrap: wrap;
+  min-height: 10vh;
+  width: 60%;
+
+  .logo {
+    flex: 1 1 10rem;
+    @include flex(flex-start, center, row);
+
+    h1 {
+      margin: 2rem;
+    }
+  }
+}
+
+ul {
+  flex: 1 1 40rem;
+  @include flex(space-around, center, row)
+}
+
+.intro {
+  min-height: 90vh;
+  width: 90%;
+  margin: auto;
+  @include flex(space-between, center, row);
+  flex-wrap: wrap;
+
+  h2 {
+    font-size: 8rem;
+    padding-top: 2rem;
+    background: $gradient;
+    color: transparent;
+    background-clip: text;
+    display: inline-block;
+  }
+
+  h3 {
+    font-size: 6rem;
+    padding: 2rem 0rem;
+  }
+
+  p {
+    padding-top: 2rem;
+    color: $gray-text;
+  }
+}
+
+.splash {
+  position: absolute;
+  height: 100%;
+  top: 0%;
+  right: 0%;
+  z-index: -1;
+}
+
+.intro-social {
+  margin-top: 4rem;
+
+  a {
+    margin-right: 3rem;
+  }
+}
+
+.active {
+  background: $gray-text;
+  color: white;
+  padding: 1em 3rem;
+  border-radius: 2rem;
+}
+
+.intro-text, .intro-images {
+  flex: 1 1 40rem;
+}
+
+#clock {
+  animation: clock 4s infinite linear;
+  transform-box: fill-box;
+  transform-origin: 50% 90%;
+}
+
+#plant-left {
+  animation: plant 2s infinite alternate ease;
+  transform-origin: bottom;
+}
+
+#plant-right {
+  animation: plant 2s infinite alternate ease 0.8s;
+  transform-origin: bottom;
+}
+
+#fill-circle {
+  animation: fill-circle 1s infinite alternate ease-in-out;
+}
+
+#border-circle {
+  animation: border-circle 1s infinite alternate ease-in-out;
+}
+
+@keyframes border-circle {
+  to {
+    transform: translate(0%, 0%);
+  } from {
+    transform: translate(-2%, 2%);
+  }
+}
+
+@keyframes fill-circle {
+  to {
+    transform: translate(0%, 0%);
+  } from {
+    transform: translate(2%, -2%);
+  }
+}
+
+@keyframes clock {
+  to {
+    transform: rotateZ(0deg);
+  } from {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes plant {
+  to {
+    transform: translateY(-5%);
+  } from {
+    transform: translateY(0%);
+  }
+}
