@@ -13,10 +13,13 @@
 
 .project-image {
   flex: 1 1 40rem;
-
+  
   img {
     width: 100%;
+    height: 100%;
     object-fit: cover;
+    border-radius: 2rem;
+    box-shadow: .5rem .5rem 1rem rgba(0, 0, 0, 0.4);
   }
 }
 
@@ -40,7 +43,6 @@
   background: transparent;
   border: none;
   margin-right: 2rem;
-  padding: .8rem 1.6rem;
   font-size: 1.6rem;
   line-height: 1;
   font-weight: 700;
@@ -53,10 +55,11 @@
 }
 
 .code:hover {
-  padding-left: 2.2rem;
+  padding-left: 2rem;
 }
 
 .live {
+  padding: .8rem 1.6rem;
   border: .3rem solid transparent;
   border-image: $gradient 1;
   position: relative;

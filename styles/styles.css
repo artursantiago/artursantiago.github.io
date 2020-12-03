@@ -366,8 +366,12 @@ ul {
 
 .project-image img {
   width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 2rem;
+  -webkit-box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.4);
+          box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.4);
 }
 
 .project-info {
@@ -405,7 +409,6 @@ ul {
   background: transparent;
   border: none;
   margin-right: 2rem;
-  padding: .8rem 1.6rem;
   font-size: 1.6rem;
   line-height: 1;
   font-weight: 700;
@@ -418,10 +421,11 @@ ul {
 }
 
 .code:hover {
-  padding-left: 2.2rem;
+  padding-left: 2rem;
 }
 
 .live {
+  padding: .8rem 1.6rem;
   border: .3rem solid transparent;
   -o-border-image: linear-gradient(135deg, #02aab0, #00cdac) 1;
      border-image: linear-gradient(135deg, #02aab0, #00cdac) 1;
