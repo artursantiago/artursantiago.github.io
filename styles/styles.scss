@@ -3,7 +3,8 @@ $header2: 4rem;
 $header3: 2.5rem;
 $header4: 2rem;
 $text: 2.5rem;
-$gradient: linear-gradient(left, #38d39f, #38a4d3);
+// $gradient: linear-gradient(left, #38d39f, #38a4d3);
+$gradient: linear-gradient(135deg,#02aab0,#00cdac);
 $background-color: #154353;
 $gray-text: #2c2c2c;
 
@@ -16,6 +17,7 @@ $gray-text: #2c2c2c;
 
 @import 'global';
 @import 'intro';
+@import 'projects';
 
 
 @media screen and (max-width: 1332px) {
@@ -27,6 +29,38 @@ $gray-text: #2c2c2c;
   }
   nav {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .projects {
+    display: grid;
+    width: 70%;
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  }
+
+  .project {
+    margin: 2rem;
+    position: relative;
+    transition: background .3s ease;
+  }
+
+  .project:hover {
+    background: black;
+  }
+
+  .project-image {
+    transition: opacity .3s ease;
+
+  }
+
+  .project-image:hover {
+    opacity: 0.4;
+  }
+
+  .project-info {
+    position: absolute;
+    display: none;
   }
 }
 

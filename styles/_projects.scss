@@ -1,0 +1,84 @@
+.projects {
+  @include flex(center, center, column);
+  min-height: 90vh;
+  width: 60%;
+  margin: auto;
+  padding-top: 4rem;
+}
+
+.project {
+  @include flex(center, center, row);
+  margin: 3rem 0rem;
+}
+
+.project-image {
+  flex: 1 1 40rem;
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.project-info {
+  flex: 1 1 40rem;
+  padding-right: 2rem;
+
+  p {
+    margin: 2rem 0rem 3rem;
+    color: $gray-text;
+  }
+}
+
+.actions {
+  @include flex(flex-start, center, row);
+  flex-wrap: wrap;
+}
+
+.live, .code {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  margin-right: 2rem;
+  padding: .8rem 1.6rem;
+  font-size: 1.6rem;
+  line-height: 1;
+  font-weight: 700;
+
+  color: transparent;
+  background: $gradient;
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: all .3s ease;
+}
+
+.code:hover {
+  padding-left: 2.2rem;
+}
+
+.live {
+  border: .3rem solid transparent;
+  border-image: $gradient 1;
+  position: relative;
+}
+
+.live:hover {
+  color: white;
+}
+
+.live:hover::after {
+  width: 100%;
+}
+
+.live::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 0%;
+  height: 100%;
+  z-index: -1;
+  background: $gradient;
+  transition: all .3s ease;
+}
