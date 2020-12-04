@@ -35,6 +35,12 @@ h5 {
   font-size: $header4;
 }
 
+textarea {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  padding: 1rem;
+}
+
 a {
   color: $gray-text;
   text-decoration: none;
