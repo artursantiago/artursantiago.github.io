@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Rock+Salt&display=swap');
+
+/** Global Styles **/
+*, :after, :before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/*----------------------*/
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  min-width: 100vw;
+  background: #ffd369;
+  padding: 2rem;
+}
+
+.name {
+  font-size: 4rem;
+  text-align: center;
+  font-family: 'Rock Salt', cursive;
+}
+
+.description {
+  font-size: 2rem;
+  letter-spacing: 1rem;
+  text-align: center;
+  font-family: 'Oswald', sans-serif;
+  color:#393e46;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.social li {
+  padding: .5rem;
+}
+
+.social li {
+  list-style: none;
+}
